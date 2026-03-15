@@ -108,7 +108,7 @@ export default function SEEN() {
         .input-area { border-top:1px solid #1e1a16; padding:24px; background:#0d0d0d; position:sticky; bottom:0; }
         .input-inner { max-width:680px; margin:0 auto; display:flex; gap:12px; align-items:flex-end; }
         .input-field { flex:1; background:#111009; border:1px solid #2e2820; color:#e8dcc8; font-family:'Jost',sans-serif; font-size:14px; font-weight:300; line-height:1.7; padding:14px 18px; resize:none; min-height:52px; max-height:200px; outline:none; transition:border-color 0.2s ease; overflow-y:auto; }
-        .input-field::placeholder { color:#4a4238; }
+        .input-field::placeholder { color:#8a7968; }
         .input-field:focus { border-color:#8a7968; }
         .send-btn { background:#e8dcc8; border:none; color:#0d0d0d; font-family:'Jost',sans-serif; font-size:10px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; padding:14px 20px; cursor:pointer; transition:all 0.2s ease; white-space:nowrap; height:52px; flex-shrink:0; }
         .send-btn:hover:not(:disabled) { background:#c4b49a; }
