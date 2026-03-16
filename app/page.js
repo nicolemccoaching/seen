@@ -19,7 +19,7 @@ export default function SEEN() {
   const [messages, setMessages] = useState([{ role: "assistant", content: WELCOME_MESSAGE }]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [showIntro, setShowIntro] = useState(true);
+  const [screen, setScreen] = useState("screening");
   const bottomRef = useRef(null);
   const textareaRef = useRef(null);
 
@@ -61,7 +61,46 @@ export default function SEEN() {
     if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendMessage(); }
   };
 
-  if (showIntro) return (
+  if (screen === "screening") return (
+    <div style={{ minHeight:"100vh", background:"#0d0d0d", display:"flex", alignItems:"center", justifyContent:"center", padding:"40px 20px" }}>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+        * { box-sizing:border-box; margin:0; padding:0; }
+        .s-container { max-width:580px; width:100%; }
+        .s-eyebrow { font-family:'Jost',sans-serif; font-size:10px; font-weight:400; color:#8a7968; letter-spacing:0.3em; text-transform:uppercase; margin-bottom:32px; animation:fadeUp 1s ease forwards; opacity:0; }
+        .s-heading { font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:300; color:#e8dcc8; line-height:1.4; margin-bottom:24px; animation:fadeUp 1s ease 0.2s forwards; opacity:0; }
+        .s-body { font-family:'Jost',sans-serif; font-size:13px; font-weight:300; color:#a89880; line-height:1.9; margin-bottom:32px; animation:fadeUp 1s ease 0.4s forwards; opacity:0; }
+        .s-checks { margin-bottom:40px; animation:fadeUp 1s ease 0.6s forwards; opacity:0; }
+        .s-check { font-family:'Jost',sans-serif; font-size:13px; font-weight:300; color:#c4b49a; line-height:1.8; padding:12px 0; border-bottom:1px solid #1e1a16; display:flex; gap:12px; align-items:flex-start; }
+        .s-check-dash { color:#8a7968; flex-shrink:0; margin-top:2px; }
+        .s-note { font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:300; font-style:italic; color:#8a7968; line-height:1.7; margin-bottom:40px; animation:fadeUp 1s ease 0.8s forwards; opacity:0; }
+        .s-buttons { display:flex; flex-direction:column; gap:12px; animation:fadeUp 1s ease 1s forwards; opacity:0; }
+        .s-btn-primary { font-family:'Jost',sans-serif; font-size:11px; font-weight:400; letter-spacing:0.3em; text-transform:uppercase; color:#0d0d0d; background:#e8dcc8; border:none; padding:18px 32px; cursor:pointer; transition:all 0.3s ease; }
+        .s-btn-primary:hover { background:#c4b49a; }
+        .s-btn-secondary { font-family:'Jost',sans-serif; font-size:11px; font-weight:300; letter-spacing:0.2em; text-transform:uppercase; color:#6b5f52; background:transparent; border:1px solid #2e2820; padding:16px 32px; cursor:pointer; transition:all 0.3s ease; text-decoration:none; display:block; text-align:center; }
+        .s-btn-secondary:hover { color:#a89880; border-color:#6b5f52; }
+        @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+      `}</style>
+      <div className="s-container">
+        <div className="s-eyebrow">Before you begin</div>
+        <div className="s-heading">An honest note.</div>
+        <p className="s-body">SEEN will ask you to look honestly at your past — the relationships that shaped you, the patterns you developed to survive them, and how they show up in your life today. Some of what surfaces may be uncomfortable. That's not a flaw in the process. It's the process working.</p>
+        <p className="s-body" style={{marginTop:'-16px'}}>This tool works best when you have some support around you. Ask yourself honestly:</p>
+        <div className="s-checks">
+          <div className="s-check"><span className="s-check-dash">—</span><span>Am I in a relatively stable place right now, even if things are hard?</span></div>
+          <div className="s-check"><span className="s-check-dash">—</span><span>Do I have at least one person — a therapist, a trusted friend, someone — I can talk to if something comes up?</span></div>
+          <div className="s-check"><span className="s-check-dash">—</span><span>Am I approaching this from curiosity about myself, rather than in the middle of a crisis?</span></div>
+        </div>
+        <p className="s-note">If you answered no to any of these, we'd gently encourage you to do this alongside a therapist rather than alone. Not because something is wrong with you — but because what you might uncover deserves proper support around it.</p>
+        <div className="s-buttons">
+          <button className="s-btn-primary" onClick={() => setScreen("intro")}>I'm ready — Begin</button>
+          <a className="s-btn-secondary" href="https://www.psychologytoday.com/us/therapists" target="_blank" rel="noopener noreferrer">I'd like to find a therapist first</a>
+        </div>
+      </div>
+    </div>
+  );
+
+  if (screen === "intro") return (
     <div style={{ minHeight:"100vh", background:"#0d0d0d", display:"flex", alignItems:"center", justifyContent:"center", padding:"40px 20px" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
@@ -82,7 +121,7 @@ export default function SEEN() {
         <div className="divider" />
         <p className="intro-text">You've mastered the art of functioning.<br />This is the space to understand why.</p>
         <p className="intro-sub">A guided conversation rooted in psychology and science.<br />No optimization. No tracking. No fixing.<br />Just an honest look at yourself — where you came from,<br />what you learned, and what you've been carrying.</p>
-        <button className="begin-btn" onClick={() => setShowIntro(false)}>Begin</button>
+        <button className="begin-btn" onClick={() => setScreen("chat")}>Begin</button>
         <p className="privacy">Your responses are private and never stored.</p>
       </div>
     </div>
