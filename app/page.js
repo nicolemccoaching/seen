@@ -83,20 +83,20 @@ export default function SEEN() {
         .s-btn-secondary:hover { background:#2e2820; border-color:#a89880; color:#e8dcc8; }
         @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
       `}</style>
-      <div className="s-container">
+ <div className="s-container">
         <div className="s-topline">
           <span className="s-logo">SEEN</span>
-          <span className="s-eyebrow">Before you begin</span>
         </div>
+        <div className="s-eyebrow" style={{marginBottom:'12px'}}>Before you begin</div>
         <div className="s-heading">An honest note.</div>
         <p className="s-body">SEEN will ask you to look honestly at your past — the relationships that shaped you, the patterns you developed to survive them, and how they show up in your life today. Some of what surfaces may be uncomfortable. That's not a flaw in the process. It's the process working.</p>
         <p className="s-body">This tool works best when you have some support around you. Ask yourself honestly:</p>
         <div className="s-checks">
-          <div className="s-check"><span className="s-check-dash">—</span><span>My life is demanding right now, but I'm not in the middle of an active crisis. Can I sit with something uncomfortable without it pulling me under?</span></div>
-          <div className="s-check"><span className="s-check-dash">—</span><span>Do I have at least one person, such as a therapist or a trusted friend, I can talk to if something comes up?</span></div>
-          <div className="s-check"><span className="s-check-dash">—</span><span>Am I approaching this from curiosity about myself with the intention of self-growth, rather than in the middle of a crisis?</span></div>
+          <div className="s-check"><span className="s-check-dash">—</span><span>My life is demanding right now, but I'm not in the middle of an active crisis — can I sit with something uncomfortable without it pulling me under?</span></div>
+          <div className="s-check"><span className="s-check-dash">—</span><span>Do I have at least one person — a therapist, a trusted friend, someone — I can talk to if something comes up?</span></div>
+          <div className="s-check"><span className="s-check-dash">—</span><span>Am I approaching this from curiosity about myself, rather than in the middle of a crisis?</span></div>
         </div>
-        <p className="s-note">If you answered no to any of these, we'd encourage you to do this alongside a therapist. What surfaces here goes further when you don't have to hold it alone and deserves more than silence after.</p>
+        <p className="s-note">If you answered no to any of these, you don't have to hold what comes up alone. Do this alongside a therapist.</p>
         <div className="s-buttons">
           <button className="s-btn-primary" onClick={() => setScreen("intro")}>I'm ready — Begin</button>
           <a className="s-btn-secondary" href="https://www.psychologytoday.com/us/therapists" target="_blank" rel="noopener noreferrer">I'd like to find a therapist first</a>
