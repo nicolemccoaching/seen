@@ -92,7 +92,7 @@ export default function SEEN() {
         <p className="s-body">SEEN will ask you to look honestly at your past — the relationships that shaped you, the patterns you developed to survive them, and how they show up in your life today. Some of what surfaces may be uncomfortable. That's not a flaw in the process. It's the process working.</p>
         <p className="s-body">This tool works best when you have some support around you. Ask yourself honestly:</p>
         <div className="s-checks">
-          <div className="s-check"><span className="s-check-dash">—</span><span>My life is demanding right now, but I'm not in the middle of an active crisis. Can sit with something uncomfortable without it pulling me under?</span></div>
+          <div className="s-check"><span className="s-check-dash">—</span><span>My life is demanding right now, but I'm not in the middle of an active crisis. Can I sit with something uncomfortable without it pulling me under?</span></div>
           <div className="s-check"><span className="s-check-dash">—</span><span>Do I have at least one person, such as a therapist or a trusted friend, I can talk to if something comes up?</span></div>
           <div className="s-check"><span className="s-check-dash">—</span><span>Am I approaching this from curiosity about myself with the intention of self-growth, rather than in the middle of a crisis?</span></div>
         </div>
