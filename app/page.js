@@ -96,7 +96,7 @@ export default function SEEN() {
           <div className="s-check"><span className="s-check-dash">—</span><span>Do I have at least one person, such as a therapist or a trusted friend, I can talk to if something comes up?</span></div>
           <div className="s-check"><span className="s-check-dash">—</span><span>Am I approaching this from curiosity about myself with the intention of self-growth, rather than in the middle of a crisis?</span></div>
         </div>
-        <p className="s-note">If you answered no to any of these, we'd gently encourage you to do this alongside a therapist rather than alone. Those who do this work in a supported container go further because what you're about to uncover deserves that kind of room and support.</p>
+        <p className="s-note">If you answered no to any of these, we'd encourage you to do this alongside a therapist. What surfaces here goes further when you don't have to hold it alone and deserves more than silence after.</p>
         <div className="s-buttons">
           <button className="s-btn-primary" onClick={() => setScreen("intro")}>I'm ready — Begin</button>
           <a className="s-btn-secondary" href="https://www.psychologytoday.com/us/therapists" target="_blank" rel="noopener noreferrer">I'd like to find a therapist first</a>
