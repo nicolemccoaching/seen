@@ -75,7 +75,7 @@ export default function SEEN() {
         .s-check { font-family:'Jost',sans-serif; font-size:15px; font-weight:300; color:#c4b49a; line-height:1.7; padding:8px 0; border-bottom:1px solid #1e1a16; display:flex; gap:12px; align-items:flex-start; }
         .s-check:first-child { border-top:1px solid #1e1a16; }
         .s-check-dash { color:#8a7968; flex-shrink:0; margin-top:2px; }
-        .s-note { font-family:'Cormorant Garamond',serif; font-size:17px; font-weight:300; font-style:italic; color:#8a7968; line-height:1.7; margin-bottom:32px; animation:fadeUp 1s ease 0.8s forwards; opacity:0; }
+        .s-note { font-family:'Cormorant Garamond',serif; font-size:17px; font-weight:300; font-style:italic; color:#c4b49a; line-height:1.7; margin-bottom:32px; animation:fadeUp 1s ease 0.8s forwards; opacity:0; }
         .s-buttons { display:flex; flex-direction:column; gap:12px; max-width:400px; animation:fadeUp 1s ease 1s forwards; opacity:0; }
         .s-btn-primary { font-family:'Jost',sans-serif; font-size:11px; font-weight:400; letter-spacing:0.3em; text-transform:uppercase; color:#0d0d0d; background:#e8dcc8; border:none; padding:18px 32px; cursor:pointer; transition:all 0.3s ease; }
         .s-btn-primary:hover { background:#c4b49a; }
